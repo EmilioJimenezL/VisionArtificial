@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Images and Data
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tiff
+*.bmp
+*.npy
+*.npz
+*.h5
+dataset/
+data/
+models/
+*.pkl
+
+# System
+.DS_Store
+Thumbs.db
+*.log
+.coverage
+htmlcov/
