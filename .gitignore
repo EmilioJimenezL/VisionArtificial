@@ -36,9 +36,6 @@ env/
 .settings/
 
 # Images and Data
-*.jpg
-*.jpeg
-*.png
 *.gif
 *.tiff
 *.bmp
