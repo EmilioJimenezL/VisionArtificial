@@ -6,6 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
 
 def open_image(filepath, size=(256,256), cmap='gray', verbose=False):
     if verbose: print('Opening image: {}'.format(filepath))
@@ -27,7 +29,7 @@ def open_images_with_labels(folder, label):
 
 def preprocess_image(image):
     equalized = cv2.equalizeHist(image)
-    blurred = cv2.GaussianBlur(equalized, (5, 5), 0)
+    blurred = cv2.GaussianBlur(equalized, (9, 9), 0)
     canny = cv2.Canny(blurred, 50, 150)
     normalized = canny / 255.0
     flattened = normalized.flatten()
@@ -57,6 +59,9 @@ if __name__ == '__main__':
     y = np.array(labels0 + labels1)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+    model = LogisticRegression()
+    train_model(model, X_train, y_train)
 
     model = load_model()
     accuracy = model.score(X_test, y_test)
