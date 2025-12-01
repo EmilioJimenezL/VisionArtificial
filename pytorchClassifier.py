@@ -3,12 +3,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
-import torchvision.datasets as datasets
-from torch.utils.data import DataLoader
-import torch.optim as optim
-from torchvision.datasets import ImageFolder
 from PIL import Image
-from torchvision.datasets import ImageFolder
 
 def preprocess_image(path):
     #Preprocessing the image for use to predict

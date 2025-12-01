@@ -6,7 +6,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
-from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 
 def open_image(filepath, size=(256,256), cmap='gray', verbose=False):
